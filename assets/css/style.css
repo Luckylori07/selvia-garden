@@ -423,3 +423,22 @@ p { margin: 0; }
   overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
 }
 [hidden] { display: none !important; }
+
+/* ---------- Versione demo: striscia in cima e filigrana (solo bozza) ---------- */
+.demo-banner {
+  background: var(--ocra); color: var(--forest-900);
+  padding: 8px var(--gutter); text-align: center;
+  font-size: .9rem; line-height: 1.4;
+}
+.demo-banner a { font-weight: 700; text-underline-offset: 3px; }
+.demo-banner a:hover { text-decoration-thickness: 2px; }
+.demo-banner a:focus-visible { --focus: var(--forest-900); }
+
+.demo-watermark::after {
+  content: ""; position: fixed; inset: 0; z-index: 45;
+  background: url("../img/demo-watermark.svg") 0 0 / 260px 173px repeat;
+  pointer-events: none;
+}
+@media (min-width: 720px) {
+  .demo-watermark::after { background-size: 360px 240px; }
+}

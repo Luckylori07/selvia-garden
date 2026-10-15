@@ -4,7 +4,7 @@ Sito statico di una pagina per **Selvia Garden di Ivan Bersan** (giardinaggio, V
 HTML + CSS + JS puro: nessun framework, nessuna build, nessuna dipendenza, nessun cookie né tracking.
 
 > **Stato: PROPOSTA / BOZZA.** Non è il sito ufficiale e il titolare non ha ancora approvato nulla.
-> Per questo la pagina ha `noindex, nofollow` e nel footer c'è la riga "Proposta di sito realizzata da [NOME AGENZIA]".
+> Per questo la pagina ha `noindex, nofollow` e in cima c'è la striscia "VERSIONE DEMO" con link a Tramontis, su tutta la pagina c'è una filigrana "DEMO" e nel footer c'è la riga "Proposta di sito realizzata da [NOME AGENZIA]".
 
 ## Struttura
 
@@ -61,6 +61,7 @@ Usa solo foto di lavori veri dell'attività: niente foto stock.
 ## Da bozza a sito ufficiale
 
 - [ ] Rimuovere `<meta name="robots" content="noindex, nofollow">` da `index.html` **e** da `privacy.html`.
+- [ ] Rimuovere la striscia "VERSIONE DEMO" (`.demo-banner`) in cima a `index.html` e `privacy.html`, la classe `demo-watermark` dal `<body>` di entrambe (è la filigrana "DEMO") e, se vuoi, `assets/img/demo-watermark.svg`.
 - [ ] Rimuovere il paragrafo `.draft-note` ("Proposta di sito realizzata da [NOME AGENZIA]") dal footer di `index.html`.
 - [ ] Confermare l'indirizzo e i servizi "da confermare" con il titolare.
 - [ ] Aggiungere il dominio: file `CNAME` nella radice (GitHub Pages) e impostazioni DNS.
